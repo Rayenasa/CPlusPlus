@@ -4,7 +4,7 @@
     Purpose: prints out the table of 1 to 10
 
     @author Victor Wernet
-    @version 1.0 25/09/15
+    @version 1.0 02/09/15
 */
 
 #include "Table.h"
@@ -14,28 +14,22 @@ using namespace std;
 /**
 	Constructor
 */
-Table::Table()
+Table::Table(int tn)
 {
-	cout << "Printing out the tables from 1 to 10" << endl;
+	tableNumber = tn;
+}
+
+//Print out the corresponding table number
+void Table::print()
+{
+	cout << "\nTable of " << tableNumber << endl;
+	cout << "---------------" << endl;
 	
-	//Table starting at 1 
-	tableNumber = 1;
-	
-	//This loops every time the inner loop breaks out. Creating an automatic 1 to 10 table
-	for(int loopThroughTableOneToTen = 1; loopThroughTableOneToTen <= 10; loopThroughTableOneToTen++) 
+	for(int i = 0; i<=10; i++)
 	{
-		for(int loopThroughTable = 1; loopThroughTable<=10; loopThroughTable++)
+		if(i!=0)
 		{
-			cout << tableNumber << "*" << loopThroughTable << "= " << tableNumber*loopThroughTable << endl;
-			
-			//change the table number to the next table, thus first table of 1 
-			//afterwards table of 2 etc.
-			if(loopThroughTable>=10)
-			{
-				tableNumber++;
-				
-				cout << "\n" << endl;
-			}
+			cout << i << "*" << tableNumber << "= " << i*tableNumber << endl;
 		}
-    }
+	}
 }

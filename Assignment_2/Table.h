@@ -5,7 +5,7 @@
 	should look and work.
 
     @author Victor Wernet
-    @version 1.0 25/09/15
+    @version 1.0 02/09/15
 */
 
 #ifndef AGE_H
@@ -18,7 +18,8 @@ using namespace std;
 class Table
 {
 	public:
-		Table();
+		Table(int tn);
+		void print();
 		int tableNumber;
 };
 
