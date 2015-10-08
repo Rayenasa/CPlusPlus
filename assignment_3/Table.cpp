@@ -8,7 +8,7 @@
 	Questions are based on the tables from 1 to 10.
 
     @author Victor Wernet
-    @version 1.0 8 october 2015
+    @version 1.0  8 october 2015
 */
 
 #include "Table.h"

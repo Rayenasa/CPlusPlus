@@ -5,7 +5,7 @@
 	should look and work.
 
     @author Victor Wernet
-    @version 1.0 8 october 2015
+    @version 1.0  8 october 2015
 */
 
 #ifndef TABLE_H

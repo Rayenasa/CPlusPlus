@@ -5,7 +5,7 @@
 	after execution of the .exe 
 
     @author Victor Wernet
-    @version 1.0 8 october 2015
+    @version 1.0  8 october 2015
 */
 
 #include "Table.h"
