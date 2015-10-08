@@ -5,7 +5,7 @@
 	should look and work.
 
     @author Victor Wernet
-    @version 1.0 18/09/15
+    @version 1.0 18 september 2015
 */
 
 #ifndef AGE_H
