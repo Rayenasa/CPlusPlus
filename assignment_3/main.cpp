@@ -12,7 +12,7 @@
 
 using namespace std;
 
-const int MAX_LENGTH = 5;
+const int MAX_AMOUNT = 5;
 
 int main()	
 {	
@@ -23,10 +23,7 @@ int main()
 	Table *table[10];
 	
 	//other variables
-	int loopThroughArrayToCheckIfScoreIsNotThree = 0, 
-		t = 1, 
-		randomNumber, 
-		score = 0;
+	int t = 1, randomTable, counter = 0;
 
 	//Creating a loop to initialize the objects
 	//dynamic variable "new"
@@ -36,49 +33,30 @@ int main()
 		t++;
 	}
 	
-	//reset value so that i can be reused
-	t = 0;
-	
-	while(score!=3)
+	while(table[randomTable]->ready()!=true && counter != 5)
 	{
 		//random number between 0 and 9 index
-		randomNumber = rand() % 10;
-	
-		//print out the score
-		cout << "\nCurrent score: " << score << endl;
+		randomTable = rand() % 10;
 	
 		//ask calculation question
-		table[randomNumber]->print();
-		
-		//check to see if the current table has a score, if so
-		//increment the score;
-		if(table[randomNumber]->ready()!=0)
-		{
-			score++;
-			t = 0;
+		table[randomTable]->print();
 			
-			if(score==3)
-			{
-				cout <<"\nCongratulations you passed!" << endl;
-			}
-		}
-	
-		//otherwise reset the value to zero.
-		else
+		//keep count of the amount of equation question that has been asked
+		counter++;
+				
+		if(counter==MAX_AMOUNT)
 		{
-			score = 0;
-			t++;
-			
-			if(t==MAX_LENGTH)
-			{
-				cout << "\nAww you'll do better next time!" << endl;
-				score = 3;
-			}
+			cout << "\nAmount of questions allowed reached" << endl;
 		}
 	}
 	
+	cout <<"\nTest done :)" << endl;
+	
+	//Delete all dynamic allocation, otherwise memory leak
 	for(int i = 0; i <= 9; i++)
 	{
+		table[i]->deleteDynamicAllocation();
+		
 		delete table[i];
 	}
 	

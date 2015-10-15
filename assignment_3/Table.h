@@ -20,15 +20,17 @@ using namespace std;
 class Table
 {
 	public:
-		int tableNumber;
-		int score;
-		int randomTemp;
+		int temp;
 		int input;
+		int tableNumber;
+		int randomLine;
+		int *equationAskedCountPerLine;
+		bool equationCorrectAnswerCountReachedThree;
 		
-		Table();
 		Table(int tn);
 		void print();
-		int ready();
+		bool ready();
+		void deleteDynamicAllocation();
 };
 
 #endif
