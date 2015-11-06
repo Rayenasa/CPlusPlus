@@ -14,16 +14,17 @@
 #include <stdlib.h>  /* srand, rand */
 #include <time.h>	/* time */
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 class Actor
 {
 	public:
-		/*
-			defining the doYourThing() method as virtual and abstract
-		*/
-		virtual void doYourThing() = 0;
+	
+		virtual void start() = 0;
+		virtual void end() = 0;
+		void doYourThing();
 };
 
 #endif

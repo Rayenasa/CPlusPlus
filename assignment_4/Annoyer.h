@@ -29,7 +29,8 @@ class Annoyer : public Shower, public Beeper
 			
 			Annoyer() : Beeper(0,0), Shower("",0){}
 		*/
-		void doYourThing();
+		void start();
+		void end();
 };
 
 #endif

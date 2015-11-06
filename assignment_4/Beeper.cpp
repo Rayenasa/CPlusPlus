@@ -21,22 +21,16 @@ Beeper::Beeper()
 	for(int p = 0; p <= 5; p++)
 	{
 		pitch[p] = 420 + p;
-		time[p] = 1000 * p; 
+		time[p] = 1000 * (p + 1); 
 	}
 }
 
-/*
-	Declaring the doYourThing() method derived from class Actor.
-	This will make the Actor beep with a unique pitch.
-*/
-void Beeper::doYourThing()
+void Beeper::start()
 {
 	Beep(pitch[rand() % 5], time[rand() % 5]);
-	
-	deallocate();
 }
 
-void Beeper::deallocate()
+void Beeper::end()
 {
 	delete[] pitch, time;
 }

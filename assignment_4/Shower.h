@@ -12,7 +12,6 @@
 #define SHOWER_H
 
 #include "Actor.h"
-
 using namespace std;
 
 /*
@@ -25,14 +24,11 @@ class Shower : public virtual Actor
 {
 	public:
 		string* message; 
-	
+		int timer;
+
 		Shower();
-		
-		/*
-			Defining the doYourThing() method derived from class
-		*/
-		void doYourThing();
-		void deallocate();
+		void start();
+		void end();
 };
 
 #endif

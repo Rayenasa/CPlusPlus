@@ -13,12 +13,16 @@
 
 using namespace std;
 
-/*
-	Call the doYourThing() method of Beeper and Shower.
-	This will make the Actor beep and say a text.
-*/
-void Annoyer::doYourThing()
+void Annoyer::start()
 {
-	Shower::doYourThing();
-	Beeper::doYourThing();
+	Shower::start();
+	Beeper::start();
 }
+
+void Annoyer::end()
+{
+	Shower::end();
+	Beeper::end();
+}
+
+

@@ -17,4 +17,13 @@ using namespace std;
 	Declaring the doYourThing() method as empty. 
 	Actor can not be initiated as an object
 */
-void Actor::doYourThing(){}
+void Actor::doYourThing()
+{
+	start();
+	end();
+}
+
+void Actor::start(){}
+
+void Actor::end(){}
+

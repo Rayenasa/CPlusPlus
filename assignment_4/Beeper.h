@@ -12,7 +12,6 @@
 #define BEEPER_H
 
 #include "Actor.h"
-#include <windows.h> // WinApi header 
 
 using namespace std;
 
@@ -27,14 +26,10 @@ class Beeper : public virtual Actor
 	public:
 		int* pitch;
 		int* time;
-	
-		Beeper();
 		
-		/*
-			Defining the doYourThing() method derived from class Actor
-		*/
-		void doYourThing();
-		void deallocate();
+		Beeper();
+		void start();
+		void end();
 };
 
 #endif

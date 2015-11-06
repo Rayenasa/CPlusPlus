@@ -37,7 +37,7 @@ int main()
 		in bigger programs.
 	*/
 	
-	for(int i = 0; i <= 9; i++)
+	for(int i = 0; i <= 2; i++)
 	{
 		delete actor[i];
 	}

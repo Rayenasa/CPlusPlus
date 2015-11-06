@@ -15,6 +15,7 @@ using namespace std;
 
 Shower::Shower()
 {
+	timer = 2000;
 	message = new string[5];
 	
 	message[0] = "I love acting";
@@ -23,18 +24,15 @@ Shower::Shower()
 	message[3] = "What is my line again??";
 	message[4] = "Jingle bells, Jingle bells";
 }
-/*
-	Declaring the doYourThing() method derived from class Actor
-	This will make the Actor say a text with a unique text.
-*/
-void Shower::doYourThing()
+
+void Shower::start()
 {
 	cout << message[rand() % 5] << endl;
-	
-	deallocate();
+	Sleep(timer);
 }
 
-void Shower::deallocate()
+void Shower::end()
 {
+	system("cls");
 	delete[] message;
 }
